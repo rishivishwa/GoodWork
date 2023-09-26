@@ -10,5 +10,32 @@
         android:id="@+id/homeFragment"
         android:name="com.example.goodwork.fragment.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_exploreEmployeesFragment"
+            app:destination="@id/exploreEmployeesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exploreEmployeesFragment"
+        android:name="com.example.goodwork.fragment.ExploreEmployeesFragment"
+        android:label="fragment_explore_employees"
+        tools:layout="@layout/fragment_explore_employees" >
+        <action
+            android:id="@+id/action_exploreEmployeesFragment_to_newEmployeesFragment"
+            app:destination="@id/newEmployeesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newEmployeesFragment"
+        android:name="com.example.goodwork.fragment.NewEmployeesFragment"
+        android:label="fragment_new_employeer"
+        tools:layout="@layout/fragment_new_employeer" >
+        <action
+            android:id="@+id/action_newEmployeesFragment_to_empDetailsFragment"
+            app:destination="@id/empDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/empDetailsFragment"
+        android:name="com.example.goodwork.fragment.EmpDetailsFragment"
+        android:label="fragment_emp_details"
+        tools:layout="@layout/fragment_emp_details" />
 </navigation>

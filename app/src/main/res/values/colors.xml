@@ -2,7 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="blue">#302CB3</color>
     <color name="text_heighlight">#B5649E</color>
+    <color name="text_bg">#E39FB6</color>
     <color name="grey">#C6C3B8</color>
     <color name="bg_color">#81E8D9E4</color>
 

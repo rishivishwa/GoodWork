@@ -9,12 +9,12 @@ import com.example.goodwork.DataClass
 import com.example.goodwork.databinding.ItemViewBinding
 import java.io.File
 
-class ItemsAdapter(
+class NewEmployeeItemAdapter(
     private val items: List<DataClass>,
     private val context: Context?,
-//    private val clickListenerCallback:(List<DataClass>,Int) -> Unit
+    private val clickListenerCallback:(List<DataClass>,Int) -> Unit
 ) :
-    RecyclerView.Adapter<ItemsAdapter.ViewHolder>() {
+    RecyclerView.Adapter<NewEmployeeItemAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -33,9 +33,9 @@ class ItemsAdapter(
         fun bind(item: List<DataClass>,position: Int) {
             binding.tvTitle.text = item[position].name
             binding.tvQuantity.text = item[position].title
-//            binding.root.setOnClickListener {
-//                clickListenerCallback(item, position)
-//            }
+            binding.root.setOnClickListener {
+                clickListenerCallback(item, position)
+            }
         }
     }
 }

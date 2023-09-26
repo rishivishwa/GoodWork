@@ -17,4 +17,121 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_graph" />
 
+    <LinearLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llAdvanced"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_30sdp"
+
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_weight="1"
+                android:id="@+id/ivHome"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:src="@drawable/vector" />
+            <ImageView
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_15sdp"
+
+                android:src="@drawable/rectangle" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llStairs"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_weight="1"
+                android:src="@drawable/noun_stairs" />
+            <ImageView
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_weight="1"
+                android:src="@drawable/rectangle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_weight="1"
+                android:src="@drawable/briefcase" />
+            <ImageView
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:src="@drawable/rectangle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:src="@drawable/message_square" />
+            <ImageView
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/rectangle" />
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

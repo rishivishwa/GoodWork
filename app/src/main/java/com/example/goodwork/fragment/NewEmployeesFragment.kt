@@ -1,5 +1,7 @@
 package com.example.goodwork.fragment
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,29 +9,32 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.goodwork.Activity.EmpDetailsActivity
 import com.example.goodwork.DataClass
 import com.example.goodwork.R
-import com.example.goodwork.Utils
 import com.example.goodwork.adapters.ItemsAdapter
-import com.example.goodwork.databinding.ActivityMainBinding
-import com.example.goodwork.databinding.FragmentHomeBinding
+import com.example.goodwork.adapters.NewEmpAdapter
+import com.example.goodwork.databinding.FragmentNewEmployeerBinding
+import com.example.goodwork.listener.MyFragmentListener
 
-class HomeFragment : Fragment() {
-    private lateinit var binding: FragmentHomeBinding
+
+class NewEmployeesFragment : Fragment() {
+
+    private lateinit var binding : FragmentNewEmployeerBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        binding = FragmentHomeBinding.inflate(layoutInflater)
+        binding = FragmentNewEmployeerBinding.inflate(layoutInflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val textTitle = getString(R.string.help_your_applicants_advance)
-        val spanable = Utils.changeTextColorInSentence(textTitle,"applicants advance!",context?.getColor(R.color.text_heighlight)!!)
-        binding.profileText.text = spanable
+        binding.ivBack.setOnClickListener {
+            activity?.onBackPressed()
+        }
         setAdapters()
     }
     private fun setAdapters(){
@@ -39,9 +44,13 @@ class HomeFragment : Fragment() {
         itemList.add(DataClass("Subimitted", "12 Application"))
         itemList.add(DataClass("Offered", "15 Application"))
         itemList.add(DataClass("Onboarding", "15 Application"))
-        binding.audioListRecyclear.layoutManager =LinearLayoutManager(context)
-        var  adapterAudio = ItemsAdapter(itemList, context)
+        binding.audioListRecyclear.layoutManager = LinearLayoutManager(context)
+        var  adapterAudio = NewEmpAdapter(::onNewEmployeeItemClick)
         binding.audioListRecyclear.adapter = adapterAudio
+    }
+    private fun onNewEmployeeItemClick(){
+//        startActivity(Intent(context,EmpDetailsActivity::class.java))
+        findNavController().navigate(R.id.action_newEmployeesFragment_to_empDetailsFragment)
     }
 
 }

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/custom_shadow">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_145sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@drawable/item_border"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_weight="1"
+                    android:text="GWW123065"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="Recently Added"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_8sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/headerTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/header_image" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="James Bond"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="RN"
+                    android:background="@drawable/shape_round"
+                    android:textSize="@dimen/_12sdp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:text="Peds CVICU"
+                    android:background="@drawable/shape_round"
+                    android:textSize="@dimen/_12sdp"
+                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/shape_round"
+                    android:text="Night Shift"
+                    android:textSize="@dimen/_12sdp"
+                     />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_margin="@dimen/_10sdp"
+                android:background="@drawable/shape_round"
+                android:text="7 Year of Experience"
+                android:textSize="@dimen/_12sdp"
+                android:padding="@dimen/_5sdp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
